@@ -1,0 +1,14 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX1
+Size               32M
+Start Address      0x00000000
+End Address        0x01FFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x000688CB    Jun  3 19:10:49 2025    D:/BaiduSyncdisk/work/FPGA/PRJ/project_Boot/project_Boot.runs/impl_1/VHF_BOOT_V1.bit
+0x003FFC00    0x003FFFFF    Apr 16 09:59:50 2015    D:/BaiduSyncdisk/work/FPGA/xapp1247-multiboot-spi/multiboot_address_table/timer1.bin
+0x00400000    0x00586CFF    Jun  4 16:32:05 2025    D:/BaiduSyncdisk/work/FPGA/PRJ/project_update/project_update.runs/impl_1/VHF_351612.bit
+0x00840000    0x0084003B    Apr 16 09:59:50 2015    D:/BaiduSyncdisk/work/FPGA/xapp1247-multiboot-spi/multiboot_address_table/timer2.bin

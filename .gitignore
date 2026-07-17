@@ -1,4 +1,7 @@
-# ===== Xilinx Vivado =====
+# ===== Xilinx Vivado 工程目录(现在由脚本自动生成,整体忽略) =====
+vivado_proj/
+
+# ===== 通用 Vivado 垃圾文件(即使工程目录改名也能兜底) =====
 *.jou
 *.log
 *.str
@@ -12,6 +15,7 @@
 *.hbs
 *.hgs
 *.dcp
+*.xpr
 vivado_pid*.debug
 vivado*.backup.log
 vivado*.backup.jou
@@ -20,13 +24,24 @@ usage_statistics_webtalk.xml
 webtalk_pa/
 .jobs/
 *.mif
-*_bd.tcl
+# IP 核生成的仿真模型文件(体积大,可通过重新生成 IP 核恢复)
+*_vhsyn_rfs.vhd
+*_vhsyn_rfs.v
+*.srcs/sources_1/ip/*/hdl/
 
-# .srcs 下只忽略自动生成的部分,源码本身不忽略
-*.srcs/sources_1/bd/*/hdl/
-*.srcs/sources_1/ip/*/*.veo
-*.srcs/sources_1/ip/*/*.dcp
-*.srcs/**/*.log
+# Vivado 生成的配置/比特流文件
+#*.mcs
+#*.prm
+#*.bin
+#*.bit
+
+# 整个工程目录(如果 project_Boot 就是你的 Vivado 工程根目录)
+project_Boot/*.srcs/sources_1/ip/
+project_Boot/*.runs/
+project_Boot/*.sim/
+project_Boot/*.cache/
+project_Boot/*.hw/
+project_Boot/*.ip_user_files/
 
 # ===== ModelSim / Questa =====
 *.wlf
@@ -41,6 +56,9 @@ csrc/
 *.vcd
 *.wdb
 
+# ===== 构建报告(由 gen_reports.tcl 自动生成) =====
+reports/
+
 # ===== VS Code =====
 .vscode/
 !.vscode/settings.json
@@ -53,9 +71,8 @@ Desktop.ini
 *~
 *.swp
 .DS_Store
+*.bak
+*.orig
 
 # ===== 不忽略配置文件本身 =====
 !.gitignore
-
-*.bak
-*.orig
