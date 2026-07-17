@@ -36,7 +36,15 @@ webtalk_pa/
 #*.bit
 
 # 整个工程目录(如果 project_Boot 就是你的 Vivado 工程根目录)
-project_Boot/*.srcs/sources_1/ip/
+# 只忽略 IP 核自动生成的产物,保留 .xci 配置文件本身
+project_Boot/*.srcs/sources_1/ip/*/hdl/
+project_Boot/*.srcs/sources_1/ip/*/*.dcp
+project_Boot/*.srcs/sources_1/ip/*/*.veo
+project_Boot/*.srcs/sources_1/ip/*/*.vho
+project_Boot/*.srcs/sources_1/ip/*/*_sim_netlist.*
+project_Boot/*.srcs/sources_1/ip/*/*.xml
+project_Boot/*.srcs/sources_1/ip/*/*.dat
+project_Boot/*.srcs/sources_1/ip/*/*.mem
 project_Boot/*.runs/
 project_Boot/*.sim/
 project_Boot/*.cache/
