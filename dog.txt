@@ -1,4 +1,17 @@
 dog hello
 dog2 hello
 dog3 hello
+<<<<<<< HEAD
 dog4 hello
+=======
+dog4 hello
+
+
+分支增加了新功能
+
+本地分支修改
+
+
+远端修改
+
+>>>>>>> 6accb0f (Merge branch 'develop02' of github.com:Iwishyouyou/learngit into develop02)
